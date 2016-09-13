@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * 
- * Description: netease coding test 3. still have errors. Stackoverflow.
+ * Description: netease coding test 3. DFS  hard to write.
  */
-public class Main3 {
+public class Main33 {
 	public static void solve() {
 		Scanner reader = new Scanner(System.in);
 		while (reader.hasNext()) {
@@ -20,10 +21,24 @@ public class Main3 {
 			int[] table = new int[M + 1];
 			Arrays.fill(table, -1);
 			int min = 100_000;
-			min = Math.min(min, deal(N, M, table));
-			if(min == 100_000) {
-				min = -1;
+			Stack<Integer> stack = new Stack<>();
+			stack.push(N);
+			while(!stack.isEmpty()) {
+				int n = stack.peek();
+				List<Integer> factors = getFactor(n);
+				int cur = 100_000;
+				for(int i : factors) {
+					int temp = n + i;
+					if(n + i > M) {
+						break;
+					}
+					if(table[n + i] != -1) {
+						cur = Math.min(cur, table[n + i]);
+					}
+					stack.push(temp);
+				}
 			}
+//			min = Math.min(min, deal(N, M, table));
 			System.out.println(min);
 		}
 		reader.close();
@@ -43,7 +58,7 @@ public class Main3 {
 		int min = 100_1000;
 		for(int i = 0; i < factors.size(); i ++) {
 			if(N + factors.get(i) > M) {
-				continue;
+				break;
 			}
 			if(table[N + factors.get(i)]  != -1) {
 				min = Math.min(min, 1 + table[N + factors.get(i)]);
@@ -57,16 +72,17 @@ public class Main3 {
 	
 	public static List<Integer> getFactor(int i) {
 		List<Integer> list = new ArrayList<>();
-		for(int j = 2; j * j <= i; j ++) {
+		int end = i / 2;
+		for(int j = 2; j <= end; j ++) {
 			if(i % j == 0) {
 				list.add(j);
-				list.add(i/ j);
 			}
 		}
 		return list;
 	}
 
 	public static void main(String[] args) {
-		Main3.solve();
+		Main33.solve();
 	}
 }
+
