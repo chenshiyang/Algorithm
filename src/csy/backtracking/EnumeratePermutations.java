@@ -14,6 +14,7 @@ public class EnumeratePermutations {
 				System.out.print(i + " ");
 			}
 			System.out.println();
+			return;
 		}
 		
 		for(int i = 0; i < used.length; ++ i) {
