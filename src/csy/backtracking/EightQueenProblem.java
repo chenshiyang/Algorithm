@@ -43,6 +43,8 @@ public class EightQueenProblem {
 	}
 	
 	/**
+	 * In fact, we do not need to check row.
+	 * 
 	 * @param row ----
 	 * @param col || 
 	 * @param leftSlant like this: //
