@@ -13,7 +13,6 @@ import java.util.Stack;
  */
 public class BinarySearchTree {
 	private TreeNode root;
-	
 	public int size(){
 		return size(root);
 	}
