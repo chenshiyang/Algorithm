@@ -17,7 +17,7 @@ public class MinStack<T extends Comparable> {
      * @return
      */
     public boolean isEmpty() {
-        return mainStack.isEmpty() && minStack.isEmpty();
+        return mainStack.isEmpty();
     }
 
     /**
@@ -59,11 +59,16 @@ public class MinStack<T extends Comparable> {
             throw new Exception("Stack is currently empty.");
         }
         T e = mainStack.pop();
-        if(e.compareTo(minStack.peek()) == 0) {
+        if(e ==  minStack.peek()) {
             minStack.pop();
         }
         return e;
     }
+
+    public String toString(){
+        return mainStack.toString() + "||" + minStack.toString();
+    }
+
 
     public static void main(String[] args) throws Exception {
         MinStack<Integer> minStack = new MinStack<>();
