@@ -3,7 +3,7 @@
 
 csy.array:数组相关
 
-csy.backtracking:回溯法
+csy.backtracking:回溯法 八皇后 全排列 组合
 
 csy.binarytree:二叉树,包括插入 删除 前中后序遍历 搜索,中序遍历下的前驱后继等
 
@@ -19,13 +19,20 @@ csy.math:数学相关
 
 csy.memory:JVM内存相关
 
+csy.polymorphism:多态探索
+
+csy.queue:最小队列
+
 csy.search:二分搜索
 
 csy.sort:八大经典排序算法
 
+csy.stack:最小栈
+
 csy.string:KMP算法
 
 csy.tree:树相关
+
 
 designpattern:设计模式
 
