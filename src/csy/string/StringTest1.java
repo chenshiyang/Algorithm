@@ -11,5 +11,6 @@ public class StringTest1 {
 		String s3 = new String("Hello");
 		System.out.println(s1 == s2.intern());//true
 		System.out.println(s3 == s2.intern());//false
+		System.out.println(s2.intern() == s1.intern());//true
 	}
 }
