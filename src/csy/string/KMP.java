@@ -34,7 +34,7 @@ public class KMP {
 //				return i - needle.length() + 1;
 			}
 		}
-		return 0;
+		return -1;//未找到匹配的子串，返回-1
 	}
 
 	/**
@@ -66,5 +66,7 @@ public class KMP {
 		String h1 = "BBC ABCDAB ABCDABCDABDE ABCDABD";
 		String n1 = "ABCDABD";
 		so.kmp(h1, n1);
+		String n2 = "ABCDEF";
+		System.out.println(so.kmp(h1, n2));
 	}
 }
