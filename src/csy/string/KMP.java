@@ -45,7 +45,7 @@ public class KMP {
 	 */
 	private int[] makeNext(String needle) {
 		int[] next = new int[needle.length()];//the array of the max prefix and suffix length.
-		int j = 0;//the prefix/suffix length of needle.subString(0, i);
+		int j = 0;//the prefix/suffix length of needle.subString(0, i);初始, needle.substring(0,0)的next为0
 		//here j has two meaning: 1. the length of the prefix
 		//						   2. the index of the jth element.
 		//next[0] = 0
