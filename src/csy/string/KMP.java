@@ -34,7 +34,7 @@ public class KMP {
 //				return i - needle.length() + 1;
 			}
 		}
-		return 0;
+		return -1;//未找到匹配的子串，返回-1
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class KMP {
 	 */
 	private int[] makeNext(String needle) {
 		int[] next = new int[needle.length()];//the array of the max prefix and suffix length.
-		int j = 0;//the prefix/suffix length of needle.subString(0, i);
+		int j = 0;//the prefix/suffix length of needle.subString(0, i);初始, needle.substring(0,0)的next为0
 		//here j has two meaning: 1. the length of the prefix
 		//						   2. the index of the jth element.
 		//next[0] = 0
@@ -66,5 +66,7 @@ public class KMP {
 		String h1 = "BBC ABCDAB ABCDABCDABDE ABCDABD";
 		String n1 = "ABCDABD";
 		so.kmp(h1, n1);
+		String n2 = "ABCDEF";
+		System.out.println(so.kmp(h1, n2));
 	}
 }
