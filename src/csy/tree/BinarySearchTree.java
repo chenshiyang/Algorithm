@@ -29,7 +29,11 @@ public class BinarySearchTree {
 			return node.N;
 		}
 	}
-	
+
+	public void setRoot(TreeNode root) {
+		this.root = root;
+	}
+
 	public Value search(Key key){
 		return search(root, key);
 	}
