@@ -27,7 +27,7 @@ csy.polymorphism:多态探索
 
 csy.queue:最小队列
 
-csy.search:二分搜索
+csy.search:二分搜索及其各种变体
 
 csy.sort:八大经典排序算法
 
@@ -36,6 +36,8 @@ csy.stack:最小栈
 csy.string:KMP算法
 
 csy.tree:树相关
+
+csy.ufs:并查集的实现
 
 
 designpattern:设计模式
