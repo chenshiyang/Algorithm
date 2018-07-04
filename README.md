@@ -27,7 +27,7 @@ csy.polymorphism:多态探索
 
 csy.queue:最小队列
 
-csy.search:二分搜索及其各种变体
+csy.search:二分搜索及其所有变体应用
 
 csy.sort:八大经典排序算法
 
