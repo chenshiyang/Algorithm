@@ -21,7 +21,7 @@ public class RetryAspect {
 //        return 0;
 //    }
 //
-//    @Pointcut("execution(* *(..)) && @annotation(cn.webank.cnc.cps.facility.annotation.Retryable)")
+//    @Pointcut("execution(* *(..)) && @annotation(cn.facility.annotation.Retryable)")
 //    public void retry() {
 //
 //    }
