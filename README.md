@@ -23,7 +23,7 @@ csy.math:数学相关
 
 csy.memory:JVM内存相关
 
-csy.multithread: 多线程并发问题 哲学家就餐问题 生产者消费者同步问题
+csy.multithread:多线程并发问题 哲学家就餐问题 生产者消费者同步问题
 
 csy.polymorphism:多态探索
 
