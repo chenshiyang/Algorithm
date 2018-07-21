@@ -19,6 +19,8 @@ csy.jvm:JVM相关的测试
 
 csy.list:单向链表求环,环的入口,环的长度
 
+csy.integer:Integer操作
+
 csy.math:数学相关
 
 csy.memory:JVM内存相关
