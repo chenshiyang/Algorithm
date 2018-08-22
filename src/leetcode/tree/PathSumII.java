@@ -2,6 +2,7 @@ package leetcode.tree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class PathSumII {
     /**
@@ -48,7 +49,31 @@ public class PathSumII {
      * @return
      */
     public List<List<Integer>> pathSum2(TreeNode root, int sum) {
-
+        List<List<Integer>> result = new ArrayList<>();
+        if(null == root) {
+            return result;
+        }
+        TreeNode node = root;
+        TreeNode prev = null;
+        Stack<TreeNode> stack = new Stack<>();
+        List<Integer> solution = new ArrayList<>();
+        while(null != node || !stack.isEmpty()) {
+            while(null != node) {
+                solution.add(node.val);
+                stack.push(node);
+                sum -= node.val;
+                node = node.left;
+            }
+            node = stack.pop();
+            if(node.left == null && node.right == null && sum == 0) {
+                List<Integer> so = new ArrayList<>();
+                so.addAll(solution);
+                result.add(so);
+            }
+            solution.remove(solution.size() - 1);
+            node = node.right;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
@@ -73,6 +98,6 @@ public class PathSumII {
         node6.left = node9;
         node6.right = node10;
 
-        System.out.println(so.pathSum(node1, 22));
+        System.out.println(so.pathSum2(node1, 22));
     }
 }
